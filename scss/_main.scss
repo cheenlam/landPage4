@@ -1,0 +1,140 @@
+img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.indexBox {
+    width: 100%;
+    min-height: 100vh;
+    background: no-repeat center top/ cover;
+    display: flex;
+    flex-direction: column;
+    @at-root .header {
+        width: 100%;
+        padding: 8px 15px 10px;
+        background: linear-gradient(0deg, #000, rgb(73, 73, 73));
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        @include rwd(790) {
+            padding: 1.5vw 3vw 1.5vw;
+        }
+        .inner {
+            max-width: 1600px;
+            margin: auto;
+        }
+        .logo {
+            width: 150px;
+            @include rwd(790) {
+                width: 16vw;
+                min-width: 110px;
+            }
+        }
+    }
+
+    @at-root .cntBox {
+        max-width: 1200px;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        color: #fff;
+        @include rwd(1200) {
+            padding: 4vw 0 20vw;
+            flex-direction: column;
+        }
+        .main {
+            width: 57%;
+            @include rwd(1200) {
+                width: 90%;
+                max-width: 800px;
+                margin-bottom: 6vw;
+            }
+        }
+        .msgBox {
+            width: 43%;
+            transform: translateX(-70px);
+            @include rwd(1200) {
+                width: 100%;
+               transform: translateX(0);
+            }
+            .title {
+                margin-bottom: 40px;
+                @include rwd(1200){
+                    width: 80%;
+                    max-width: 550px;
+                    margin: 0 auto 40px;
+                }
+            }
+            .qrBox {
+                margin-bottom: 15px;
+                text-align: center;
+                color: #eee;
+                @include rwd(400){
+                    font-size: 4.5vw;
+                }
+                .code {
+                    width: 120px;
+                    margin: 0 auto 10px;
+                    @include rwd(400){
+                        width: 30vw;
+                        margin: 0 auto 1.5vw;
+                    }
+                }
+            }
+            .btnBox {
+                max-width: 360px;
+                padding: 0 10px;
+                margin: auto;
+                display: flex;
+                justify-content: center;
+                @include rwd(400){
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+            .btn {
+                padding: 13px 0;
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 600;
+                letter-spacing: 0.5px;
+                background-color: rgba(255, 255, 255, 0.2);
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                font-size: 15px;
+                cursor: pointer;
+                opacity: 0.7;
+                transition: 0.5s;
+                @include hover {
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+                @include rwd(400){
+                    min-width: 200px;
+                }
+            }
+            .btn + .btn {
+                margin-left: 8px;
+                @include rwd(400){
+                    margin: 10px 0 0;
+                }
+            }
+            .icon {
+                width: 22px;
+                height: 22px;
+                margin-right: 5px;
+                background: no-repeat center;
+                &.android {
+                    background-image: url(../images/android.svg);
+                }
+                &.ios {
+                    background-image: url(../images/apple.svg);
+                }
+            }
+        }
+    }
+}

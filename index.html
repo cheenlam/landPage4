@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scss/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>落地頁04</title>
+</head>
+<body>
+    <div class="indexBox" id="indexBox">
+        <div class="header">
+            <div class="inner">
+                <div class="logo">
+                    <img src="images/logo.png">
+                </div>
+            </div>
+        </div>
+
+        <div class="cntBox">
+            <div class="main">
+                <img src="images/main.webp">
+            </div>
+            <div class="msgBox">
+                <div class="title">
+                    <img src="images/title.webp" >
+                </div>
+                <div class="dlBox">
+                    <div class="qrBox">
+                        <div class="code">
+                            <img src="images/qrCode.png">
+                        </div>
+                        <p>掃碼快捷安裝客戶端</p>
+                    </div>
+                    <div class="btnBox">
+                        <div class="btn">
+                            <div class="icon android"></div>
+                            <p>Android</p>
+                        </div>
+                        <div class="btn">
+                            <div class="icon ios"></div>
+                            <p>iPhone</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<script>
+    $(window).resize(chBg); 
+    function chBg(){
+        let boxW = document.body.offsetWidth;
+        let boxH = document.body.offsetHeight;
+        if(boxH * 1.2> boxW){
+            $('#indexBox').css('background-image','url(images/bg2.webp)')
+        }else{
+            $('#indexBox').css('background-image','url(images/bg.webp)')
+        }
+    }
+    chBg();
+
+</script>
+
+
+</body>
+</html>

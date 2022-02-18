@@ -133,7 +133,7 @@ img {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 5;
 }
 
 @media screen and (max-width: 790px) {
@@ -183,14 +183,64 @@ img {
 
 .cntBox .main {
   width: 57%;
+  position: relative;
+}
+
+.cntBox .main.on .phone {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
+.cntBox .main.on .pair {
+  opacity: 1;
+}
+
+.cntBox .main.on .pair.pair_01, .cntBox .main.on .pair.pair_02 {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
 
 @media screen and (max-width: 1200px) {
   .cntBox .main {
-    width: 90%;
-    max-width: 800px;
+    width: 93%;
+    max-width: 900px;
     margin-bottom: 6vw;
   }
+}
+
+.cntBox .main .phone {
+  width: 39%;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform: translateY(15%);
+          transform: translateY(15%);
+  opacity: 0;
+}
+
+.cntBox .main .pair {
+  width: 42%;
+  margin: auto;
+  position: absolute;
+  bottom: 1%;
+  opacity: 0;
+  -webkit-transition: 1s .3s;
+  transition: 1s .3s;
+}
+
+.cntBox .main .pair.pair_01 {
+  left: 0;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+}
+
+.cntBox .main .pair.pair_02 {
+  right: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .cntBox .msgBox {

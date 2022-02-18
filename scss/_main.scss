@@ -15,7 +15,7 @@ img {
         background: linear-gradient(0deg, #000, rgb(73, 73, 73));
         position: sticky;
         top: 0;
-        z-index: 2;
+        z-index: 5;
         @include rwd(790) {
             padding: 1.5vw 3vw 1.5vw;
         }
@@ -45,10 +45,54 @@ img {
         }
         .main {
             width: 57%;
+            position: relative;
+            &.on{
+                .phone{
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+                .pair{
+                    opacity: 1;
+                    &.pair_01,
+                    &.pair_02{
+                        transform: translateX(0%);
+                    }
+                }
+            }
+
+
+
             @include rwd(1200) {
-                width: 90%;
-                max-width: 800px;
+                width: 93%;
+                max-width: 900px;
                 margin-bottom: 6vw;
+            }
+
+            .phone {
+                width: 39%;
+                margin: auto;
+                position: relative;
+                z-index: 2;
+                transition: 1s;
+                transform: translateY(15%);
+                opacity: 0;
+            }
+
+            .pair {
+                width: 42%;
+                margin: auto;
+                position: absolute;
+                bottom: 1%;
+                opacity: 0;
+                transition: 1s .3s;
+                &.pair_01 {
+                    left: 0;
+                    transform: translateX(50%);    
+                }
+                &.pair_02 {
+                    right: 0;
+                    transform: translateX(-50%);  
+                }
             }
         }
         .msgBox {
@@ -56,11 +100,11 @@ img {
             transform: translateX(-70px);
             @include rwd(1200) {
                 width: 100%;
-               transform: translateX(0);
+                transform: translateX(0);
             }
             .title {
                 margin-bottom: 40px;
-                @include rwd(1200){
+                @include rwd(1200) {
                     width: 80%;
                     max-width: 550px;
                     margin: 0 auto 40px;
@@ -70,13 +114,13 @@ img {
                 margin-bottom: 15px;
                 text-align: center;
                 color: #eee;
-                @include rwd(400){
+                @include rwd(400) {
                     font-size: 4.5vw;
                 }
                 .code {
                     width: 120px;
                     margin: 0 auto 10px;
-                    @include rwd(400){
+                    @include rwd(400) {
                         width: 30vw;
                         margin: 0 auto 1.5vw;
                     }
@@ -88,7 +132,7 @@ img {
                 margin: auto;
                 display: flex;
                 justify-content: center;
-                @include rwd(400){
+                @include rwd(400) {
                     flex-direction: column;
                     align-items: center;
                 }
@@ -113,13 +157,13 @@ img {
                         opacity: 1;
                     }
                 }
-                @include rwd(400){
+                @include rwd(400) {
                     min-width: 200px;
                 }
             }
             .btn + .btn {
                 margin-left: 8px;
-                @include rwd(400){
+                @include rwd(400) {
                     margin: 10px 0 0;
                 }
             }
@@ -138,3 +182,4 @@ img {
         }
     }
 }
+

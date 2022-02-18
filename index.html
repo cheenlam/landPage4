@@ -18,10 +18,20 @@
             </div>
         </div>
 
+        <!-- 684*502 -->
         <div class="cntBox">
-            <div class="main">
-                <img src="images/main.webp">
+            <div class="main" id="main">
+                <div class="phone">
+                    <img src="images/phone.webp">
+                </div>
+                <div class="pair pair_01">
+                    <img src="images/pair_01.webp">
+                </div>
+                <div class="pair pair_02">
+                    <img src="images/pair_02.webp">
+                </div>
             </div>
+
             <div class="msgBox">
                 <div class="title">
                     <img src="images/title.webp" >
@@ -61,6 +71,10 @@
         }
     }
     chBg();
+
+    $(document).ready(function(){
+        $('#main').addClass('on');
+    })
 
 </script>
 

@@ -112,6 +112,10 @@ img {
   vertical-align: middle;
 }
 
+body {
+  background-color: #000;
+}
+
 .indexBox {
   width: 100%;
   min-height: 100vh;
